@@ -1,12 +1,15 @@
 [My resume on hh](https://hh.ru/resume/66ae0644ff082f03e20039ed1f425932754c74)
 
 # Andrey Miller
-*********
+
+
 ## layout designer
-*********
+
+
 ## About me:
 He started working as a freelancer and later got a job in a company as a layout designer. After a year of work, I decided to improve my skills and now I am studying to move to the level of a front-end developer
-*********
+
+
 ## My skills: 
 * HTML5
 * CSS3/Scss
