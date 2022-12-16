@@ -2,21 +2,12 @@
 
 # Andrey Miller
 *********
-
-
 ## layout designer
 *********
-
-
 ## About me:
-
-
 He started working as a freelancer and later got a job in a company as a layout designer. After a year of work, I decided to improve my skills and now I am studying to move to the level of a front-end developer
 *********
-
-
 ## My skills: 
-
 * HTML5
 * CSS3/Scss
 * JavaScript(base)
@@ -25,20 +16,17 @@ He started working as a freelancer and later got a job in a company as a layout 
 * Git/github (base)
 
 ## Courses: 
-
 * skillbox - layout designer
 * RS Schools Course «JavaScript/Front-end. Stage 0» (in progress)
 
 
 ## Languages:
-
 * Russian - native
 * English - Intermediate B1
 * Deutsch - Elementary A1
 
 
 ## Contacts:
-
 * **Locations**: Rochechouart, France
 * **Phone**: +33 766680837
 * **Email**: andreykamiller@gmail.com
