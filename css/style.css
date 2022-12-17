@@ -146,6 +146,22 @@
     color: white;
 }
 
+.footer__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.footer {
+    background-color: #F6F7EE;
+    padding-top: 20px;
+}
+
+.footer__list svg:hover {
+    opacity: 0.5;
+}
+
 @media (max-width: 768px) {
     .code-example-container {
         position: relative;
