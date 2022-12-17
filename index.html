@@ -51,52 +51,52 @@
         <div class="skills__item">
           <h2 class="h2">My skills:</h2>
           <ul class="my-skills-list">
-            <li class="my-skills-list__item">HTML5</li>
-            <li class="my-skills-list__item">CSS3/Scss</li>
-            <li class="my-skills-list__item">JavaScript(base)</li>
-            <li class="my-skills-list__item">CMS (Wordpress, joomla, Modx)</li>
-            <li class="my-skills-list__item">Figma/Photoshop</li>
-            <li class="my-skills-list__item">Git/github (base)</li>
+            <li class="my-skills-list__item"><span>HTML5</li></span>
+            <li class="my-skills-list__item"><span>CSS3/Scss</li></span>
+            <li class="my-skills-list__item"><span>JavaScript(base)</li></span>
+            <li class="my-skills-list__item"><span>CMS (Wordpress, joomla, Modx)</li></span>
+            <li class="my-skills-list__item"><span>Figma/Photoshop</li></span>
+            <li class="my-skills-list__item"><span>Git/github (base)</li></span>
           </ul>
         </div>
         <div class="skills__item">
           <h2 class="h2">Code example:</h2>
           <pre class="code-example-container">
             <code class="lang-js">
-                document.querySelectorAll(".styles__content").forEach(item => {
-                    item.addEventListener("click", function() {
-                      let btn = this;
-                      let dropdown = this.parentElement.querySelector(".dropdown-menu");
-                  
-                      document.querySelectorAll(".styles__content").forEach(el => {
-                        if (el != btn) {
-                          el.classList.remove("show");
-                          el.classList.add("hide");
-                        }
-                      });
-                  
-                      document.querySelectorAll(".dropdown-menu").forEach(el => {
-                        if (el != dropdown) {
-                          el.classList.remove("dropdown-menu-active");
-                        }
-                      })
-                      dropdown.classList.toggle("dropdown-menu-active");
-                      btn.classList.toggle("show")
-                      btn.classList.toggle("hide")
-                    })
-                  })
-                  
-                  document.addEventListener("click", function(e) {
-                    let target = e.target;
-                    if (!target.closest(".styles")) {
-                      document.querySelectorAll(".dropdown-menu").forEach(el => {
-                          el.classList.remove("dropdown-menu-active");
-                      })
-                       document.querySelectorAll(".styles__content").forEach(el => {
-                          el.classList.remove("show");
-                      });
-                    }
-                  })
+  document.querySelectorAll(".styles__content").forEach(item => {
+      item.addEventListener("click", function() {
+        let btn = this;
+        let dropdown = this.parentElement.querySelector(".dropdown-menu");
+    
+        document.querySelectorAll(".styles__content").forEach(el => {
+          if (el != btn) {
+            el.classList.remove("show");
+            el.classList.add("hide");
+          }
+        });
+    
+        document.querySelectorAll(".dropdown-menu").forEach(el => {
+          if (el != dropdown) {
+            el.classList.remove("dropdown-menu-active");
+          }
+        })
+        dropdown.classList.toggle("dropdown-menu-active");
+        btn.classList.toggle("show")
+        btn.classList.toggle("hide")
+      })
+    })
+    
+    document.addEventListener("click", function(e) {
+      let target = e.target;
+      if (!target.closest(".styles")) {
+        document.querySelectorAll(".dropdown-menu").forEach(el => {
+            el.classList.remove("dropdown-menu-active");
+        })
+         document.querySelectorAll(".styles__content").forEach(el => {
+            el.classList.remove("show");
+        });
+      }
+    })
             </code>
           </pre>
         </div>
@@ -125,10 +125,10 @@
         </section>
         <section id="contacts" class="contacts">
             <h2 class="h2">Contacts:</h2>
-            <ul>
-                <li><strong>Locations</strong>: Rochechouart, France</li>
-                <li><strong>Phone</strong>: +33 766680837</li>
-                <li><strong>Email</strong>: andreykamiller@gmail.com</li>
+            <ul class="contacts-list">
+                <li class="contacts-list__item"><strong>Locations</strong>: Rochechouart, France</li>
+                <li class="contacts-list__item"><strong>Phone</strong>: <a href="tel:+33766680837">+33 766680837</a></li>
+                <li class="contacts-list__item"><strong>Email</strong>: <a href="mailto:andreykamiller@gmail.com">andreykamiller@gmail.com</a></li>
               </ul>
         </section>
       </main>
