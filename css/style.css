@@ -247,6 +247,9 @@ section {
 }
 
 @media (max-width: 768px) {
+  .page {
+    display: block;
+  }
   .code-example-container {
     position: relative;
     overflow-x: auto;
@@ -290,6 +293,10 @@ section {
 
     .code-example-container {
         text-align: left;
+    }
+
+    .footer__list {
+      flex-direction: column;
     }
 
 }
