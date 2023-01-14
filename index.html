@@ -72,40 +72,65 @@
           <h2 class="h2">Code example:</h2>
           <pre class="code-example-container">
             <code class="lang-js">
-  document.querySelectorAll(".styles__content").forEach(item => {
-      item.addEventListener("click", function() {
-        let btn = this;
-        let dropdown = this.parentElement.querySelector(".dropdown-menu");
-    
-        document.querySelectorAll(".styles__content").forEach(el => {
-          if (el != btn) {
-            el.classList.remove("show");
-            el.classList.add("hide");
-          }
-        });
-    
-        document.querySelectorAll(".dropdown-menu").forEach(el => {
-          if (el != dropdown) {
-            el.classList.remove("dropdown-menu-active");
-          }
-        })
-        dropdown.classList.toggle("dropdown-menu-active");
-        btn.classList.toggle("show")
-        btn.classList.toggle("hide")
-      })
-    })
-    
-    document.addEventListener("click", function(e) {
-      let target = e.target;
-      if (!target.closest(".styles")) {
-        document.querySelectorAll(".dropdown-menu").forEach(el => {
-            el.classList.remove("dropdown-menu-active");
-        })
-         document.querySelectorAll(".styles__content").forEach(el => {
-            el.classList.remove("show");
-        });
-      }
-    })
+              function toReadable(number) {
+                let ones = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine',
+                            'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen',
+                            'seventeen', 'eighteen', 'nineteen'];
+                let tens = ['twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty',
+                            'ninety'];
+              
+                let str = number.toString()
+            
+                if (number === 0) {
+                  return 'zero'
+                }
+              
+                /* 1 - 19 */
+                if (number < 20) {
+                  return ones[number - 1];
+                }
+              
+              
+                /* 20, 30, 40... */
+                else if (str[1] === '0' && number <= 99) {
+                  return tens[str[0] - 2];
+                } 
+              
+              
+                /* 21 - 99 */
+                else if (str[1] != '0' && number <= 99) {
+                  return tens[str[0] - 2] + ' ' + ones[str[1] - 1];
+                }
+              
+              
+                /* 110 - 119 */
+                else if (str[1] === '1' && number > 100) {
+                  return ones[str[0] - 1] + ' hundred ' + ones[str[1] + str[2]  - 1]
+                } 
+              
+              
+                /* 121-199 */
+                else if (str[1] != '0' && str[2] != '0' && number > 100) {
+                  return ones[str[0] - 1] + ' hundred ' + tens[str[1] - 2] + ' ' + ones[str[2] - 1]
+                } 
+              
+                /* 120, 130, 140  */
+                else if (str[1] != '0' && str[2] === '0' && number > 100) {
+                  return ones[str[0] - 1] + ' hundred ' + tens[str[1] - 2]
+                } 
+              
+              
+                /* 100, 200, 300... */
+                else if (str[1] && str[2] === '0') {
+                  return ones[str[0] - 1] + ' hundred' 
+                }
+              
+                 /* 100 - 109 */
+                else if (str[1] === '0' && number > 100) {
+                  return ones[str[0] - 1] + ' hundred ' + ones[str[2] - 1] 
+                } 
+              
+              }
             </code>
           </pre>
         </div>
